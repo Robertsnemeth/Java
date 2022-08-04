@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Test {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -46,5 +48,23 @@ public class Test {
 
         String myTown = name.concat(homeTown);
         System.out.println(myTown);
+
+        int[] newArray = {6, 24, 1991};
+        newArray[0] = 9;
+        newArray[1] = 26;
+        newArray[2] = 1992;
+
+        for(int i = 0; i < newArray.length; i++) {
+            System.out.println(newArray[i]);
+            }
+
+        ArrayList<Object> things = new ArrayList<Object>();
+        System.out.println(things);
+        things.add(6);
+        things.add("hello world");
+        things.add(3.20);
+        things.add(false);
+        things.add(new ArrayList<Integer>());
+        System.out.println(things);
         }
     }

@@ -15,6 +15,10 @@ public class AlfredQuotes {
         if(name.indexOf("Cat") > -1) {
             return "Yes, Ms. Kyle is very devious";
         }
+        if(name.indexOf("Poison") > -1) {
+            return "I might stay avay from Ivy sir.";
+        }
+        return "It is lonely being the caped crusader sir.";
         
     }
     
