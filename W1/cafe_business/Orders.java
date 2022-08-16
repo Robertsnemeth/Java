@@ -29,13 +29,15 @@ public class Orders {
             return false;
         }
         int quantity = 0;
-        for(String items : menuItems) {
+        for(int i = 0; i < menuItems.size(); i++) {
             quantity ++;
-            System.out.printf("%d - %s", quantity,items);
-            System.out.println("\n");
-        }
-        for(Double price : prices) {
-            System.out.println(price);
+            System.out.printf("%d - %s", quantity, menuItems.get(i));
+                for(int j = 0; j < prices.size(); j++) {
+                    if(i == j) {
+                        System.out.printf("--$%.2f", prices.get(j));
+                        System.out.println("\n");
+                    }
+                }
         }
         return true;
     }

@@ -19,7 +19,7 @@ public class Cafe {
         items.add("Drip");
         items.add("Capuccino");
         items.add("Latte");
-        // cafeOrders.displayMenu(items);
+        cafeOrders.displayMenu(items);
         ArrayList<Double> prices = new ArrayList<Double>();
         prices.add(1.50);
         prices.add(3.50);
@@ -27,12 +27,12 @@ public class Cafe {
         prices.add(3.50);
         cafeOrders.displayMenu(items, prices);
 
-        // System.out.println("=====Customer=====");
-        // ArrayList<String> customers = new ArrayList<>();
-        // for (int i = 0; i < 3; i++) {
-        //     cafeOrders.addCustomer(customers);
-        //     System.out.println("\n");
-        // }
+        System.out.println("=====Customer=====");
+        ArrayList<String> customers = new ArrayList<>();
+        for (int i = 0; i < 3; i++) {
+            cafeOrders.addCustomer(customers);
+            System.out.println("\n");
+        }
 
         System.out.println("======Price Chart=====");
         cafeOrders.printPriceChart("Columbian Coffe Grounds", 15.00, 3);

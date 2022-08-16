@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) {
@@ -66,5 +66,21 @@ public class Test {
         things.add(false);
         things.add(new ArrayList<Integer>());
         System.out.println(things);
+
+        HashMap<String, String> yankees = new HashMap<String, String>();
+        yankees.put("Second Base", "DJ LaMahiue");
+        yankees.put("First Base", "Anthony Rizzo");
+        yankees.put("Right Field", "Aaron Judge");
+        System.out.println(yankees);
+        Set<String> players = yankees.keySet();
+        for(String position : players) {
+            System.out.println(position);
+            System.out.println(yankees.get(position));
         }
+
+        
+
+        }
+
+
     }
