@@ -1,6 +1,7 @@
 package com.codingdojo.abstract_art;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class ArtTest {
@@ -32,11 +33,11 @@ public class ArtTest {
 		museum.add(sculpture2);
 		museum.add(sculpture3);
 		
-		for(int i = 0; i < museum.size(); i++) {
-			Art random = museum.get(r.nextInt(i));
-			random.viewArt();
-			
+		Collections.shuffle(museum);
+		for(Art pieces : museum) {
+			pieces.viewArt();
 		}
+			
 		
 		
 
