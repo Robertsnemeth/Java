@@ -1,0 +1,20 @@
+@charset "ISO-8859-1";
+
+* {
+	margin:0;
+	padding:0;
+}
+
+.this_div {
+	color: blue;
+	display: flex;
+	flex-direction: column;
+}
+
+.date {
+	color: blue;
+}
+
+.time {
+	color: green;
+}
