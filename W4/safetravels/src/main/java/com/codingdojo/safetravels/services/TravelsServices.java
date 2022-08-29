@@ -35,8 +35,8 @@ public class TravelsServices {
     }
     // deletes a travel expense
     public void deleteTravels(Long id) {
-    	Optional<Travels> optionalBook = travelsRepository.findById(id);
-    	if(optionalBook.isPresent()) {
+    	Optional<Travels> optionalTravel = travelsRepository.findById(id);
+    	if(optionalTravel.isPresent()) {
     		travelsRepository.deleteById(id);
     	} else {
     		return;

@@ -6,7 +6,6 @@ pageEncoding="ISO-8859-1"%>
 <%@page import="java.text.DecimalFormat" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
-
 <% DecimalFormat format = new DecimalFormat("$#0.00"); %>
     
 <!DOCTYPE html>
@@ -24,27 +23,17 @@ pageEncoding="ISO-8859-1"%>
             <table class="table table-dark">
                 <thead>
                     <tr>
-                        <td>Expense:</td>
-                        <td>Vendor:</td>
-                        <td>Amount:</td>
-                        <td>Actions:</td>
+                        <td>Expense</td>
+                        <td>Vendor</td>
+                        <td>Amount</td>
                     </tr>
                 </thead>
                 <tbody>
                     <c:forEach var="expense" items="${expenses}">
                         <tr>
-                            <td><a href="/expenses/${expense.id}"><c:out value="${expense.name}"/></a></td>
+                            <td><c:out value="${expense.name}"/></td>
                             <td><c:out value="${expense.vendor}"/></td>
-                            <td>$<c:out value="${expense.amount}"/></td>
-                            <td>
-                                <div class="d-flex flex-row justify-content-around align-items-center">
-                                    <a href="/expenses/edit/${expense.id}">Edit</a>|
-                                    <form action="/expenses/delete/${expense.id}" method="post">
-                                        <input type="hidden" name="_method" value="delete">
-                                        <input class="btn btn dark text-danger" type="submit" value="Delete">
-                                    </form>
-                                </div>
-                            </td>
+                            <td><fmt:formatNumber value="${expense.amount}" type="number" maxFractionDigits="2"/></td>
                         </tr>
                     </c:forEach>
                 </tbody>
